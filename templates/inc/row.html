@@ -1,0 +1,21 @@
+{% set len = el['elements']|length %}
+{% set col = 12 // len %}
+<div class="container py-5">
+<div class="row">
+    {% for i in range(0, len) %}
+    <div class="col-md-{{ col }}">
+    {% if elements[i]['type'] == "Column" %}
+        {% for el in elements[i]['elements'] %}
+            {% with x=el %}
+                {% include get_type[el["type"]] %}
+            {% endwith %}
+        {% endfor %}
+    {% else %}
+        {% with x=elements[i] %}
+            {% include get_type[elements[i]["type"]] %}
+        {% endwith %}
+    {% endif %}
+    </div>
+    {% endfor %}
+</div>
+</div>

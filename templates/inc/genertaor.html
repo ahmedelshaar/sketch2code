@@ -1,0 +1,15 @@
+{% for el in elements %}
+    {% if el['type'] == "Row" %}
+        {% with elements=el['elements'] %}
+            {% include 'inc/row.html' %}
+        {% endwith %}
+    {% elif el['type'] == "Column" %}
+        {% with elements=el['elements'] %}
+            {% include 'inc/column.html' %}
+        {% endwith %}
+    {% else %}
+        {% with x=el %}
+            {% include 'inc/container.html' %}
+        {% endwith %}
+    {% endif %}
+{% endfor %}

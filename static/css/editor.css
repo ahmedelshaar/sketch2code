@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.elements div{
+    position:absolute;
+    cursor: pointer;
+}
+div[data-type='Button']{
+    background-color: red;
+}
+div[data-type='Paragraph']{
+    background-color: brown;
+}
+div[data-type='Input text']{
+    background-color: blue;
+}
+div[data-type='Link']{
+    background-color: aqua;
+}
+div[data-type='Text']{
+    background-color: saddlebrown;
+}
+div[data-type='Vertical Navbar']{
+    background-color: cadetblue;
+}
+div[data-type='Chart Line']{
+    background-color: blueviolet;
+}
+div[data-type='Check Box']{
+    background-color: navy;
+}
+div[data-type='Horizontal Navbar']{
+    background-color: teal;
+}
+div[data-type='Image Circle']{
+    background-color: violet;
+}
+div[data-type='Image Rectangular']{
+    background-color: royalblue;
+}
+div[data-type='Map']{
+    background-color: mediumblue;
+}
+div[data-type='Radio Button']{
+    background-color: hotpink;
+}
+div[data-type='Search']{
+    background-color: khaki;
+}
+div[data-type='Textarea']{
+    background-color: rebeccapurple;
+}
+div[data-type='Stack bar']{
+    background-color: darkgreen;
+}
+div[data-type='Youtube']{
+    background-color: gold;
+}
+
+/* Editior */
+.elements{
+    position: relative;
+    display: inline-block;
+    float: left;
+    min-height: 100vh;
+    overflow: scroll;
+    width: 100vw;
+
+}
+.elements.active{
+    width: calc(100vw - 25%);
+}
+.editor{
+    display: inline-block;
+    position: fixed;
+    float: left;
+    height: 100vh;
+    overflow-y: scroll;
+    width: calc(100vw - 25%);
+    width: 25%;
+    right: 0;
+    top: 0;
+
+}

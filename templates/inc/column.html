@@ -1,0 +1,11 @@
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            {% for el in elements %}
+                {% with x=el %}
+                    {% include get_type[el["type"]] %}
+                {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
