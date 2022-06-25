@@ -1,0 +1,31 @@
+<div data-ecg-options='{"series":[{"type":"pie","data":[{"value":"10","name":"Category 1","itemStyle":{"color":null}},{"value":"40","name":"Category 2","itemStyle":{"color":null}},{"value":"60","name":"Category 3","itemStyle":{"color":null}}]}]}' data-ecg-series='[{"id":1656170500797,"label":"Category 1","value":"10","color":null},{"id":1656170502226,"label":"Category 2","value":"40","color":null},{"id":1656170502570,"label":"Category 3","value":"60","color":null}]' data-ecg-theme="macarons" id="i19a">
+</div>
+<script>
+var items = document.querySelectorAll('#i19a');
+for (var i = 0, len = items.length; i < len; i++) {
+    (function () {
+        var t = this;
+        window.$grapesEcharts || (window.$grapesEcharts = {themes: []});
+        var e = JSON.parse(this.getAttribute("data-ecg-options")), n = this.getAttribute("data-ecg-theme") || null,
+            i = function () {
+                try {
+                    var i = echarts.getInstanceByDom(t);
+                    i && echarts.dispose(i);
+                    var r = echarts.init(t, n);
+                    e && r.setOption(e)
+                } catch (t) {
+                    console.log(t)
+                }
+            }, r = function () {
+                if (n) if (window.$grapesEcharts.themes.includes(n)) i(); else {
+                    var t = document.createElement("script");
+                    t.onload = i, window.$grapesEcharts.themes.push(n), t.src = "https://unpkg.com/echarts@4.6.0/theme/".concat(n, ".js"), document.body.appendChild(t)
+                } else i()
+            };
+        if ("undefined" == typeof echarts) {
+            var o = document.createElement("script");
+            o.onload = r, o.src = "https://cdnjs.cloudflare.com/ajax/libs/echarts/4.6.0/echarts-en.min.js", document.body.appendChild(o)
+        } else r()
+    }.bind(items[i]))();
+}
+</script>

@@ -1,15 +1,24 @@
-<style>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Editor</title>
+    <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
+    <style>
     body {
         margin: 0;
     }
-</style>
-<link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet"/>
-<script src="https://unpkg.com/grapesjs"></script>
-<script src="{{ url_for('static', filename='js/grapesjs-blocks-bootstrap4.min.js') }}"></script>
-<script src="https://unpkg.com/grapesjs-echarts@0.0.20/dist/grapesjs-echarts.min.js"></script>
-
+    </style>
+</head>
+<body>
 <div id="gjs"></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.18.4/grapes.min.js"></script>
+<script src="{{ url_for('static', filename='js/grapesjs-blocks-bootstrap4.min.js') }}"></script>
+<script src="https://unpkg.com/grapesjs-echarts@0.0.20/dist/grapesjs-echarts.min.js"></script>
 <script type="text/javascript">
     var editor = grapesjs.init({
         container: '#gjs',
@@ -28,11 +37,10 @@
             },
         },
         storageManager: {
-            type: 'remote',
+            type: "remote",
             stepsBeforeSave: 3,
-            urlStore: '{{ url_for('save', name=name) }}',
-
-          },
+            urlStore: "{{ url_for('save', name=name) }}"
+        },
         canvas: {
             styles: [
                 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
@@ -43,7 +51,7 @@
                 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js',
                 "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             ],
-        }
+         }
     });
     editor.on('load', function () {
         const blockManager = editor.BlockManager;
@@ -52,6 +60,9 @@
     document.querySelector('.gjs-pn-btn.fa.fa-th-large').addEventListener('click', function () {
         editor.BlockManager.getCategories().each(ctg => ctg.set('open', false))
     })
-            editor.setComponents(`{{ html|safe }}`);
+    editor.setComponents(`{{ html|safe }}`);
 
 </script>
+</body>
+</html>
+

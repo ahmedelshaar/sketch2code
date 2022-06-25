@@ -4,7 +4,7 @@ import numpy as np
 import json
 from google.cloud import vision
 import io
-# from Generator import Generator
+from Generator import Generator
 from Predict import Predict
 
 # import os
@@ -12,11 +12,10 @@ from Predict import Predict
 
 class ComputerVision:
 
-    def __init__(self, image, path):
-        self.path = os.path.dirname(os.path.abspath(__file__)) + '/static/elements/' + path
-        self.image = cv2.imread(image)
-        self.path_image = image
-
+    def __init__(self, path, folder_name):
+        self.path = os.path.dirname(os.path.abspath(__file__)) + '/static/elements/' + folder_name
+        self.image = cv2.imread(path)
+        self.path_image = path
         self.jsonelement = []
         self.jsontext = []
         self.json = []
@@ -32,7 +31,7 @@ class ComputerVision:
         # read image.html
         img = self.image
 
-        # preprocessing in image.html
+        # preprocessing in image
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         blurred = cv2.GaussianBlur(gray, (3, 3), 0)
         canny = cv2.Canny(blurred, 120, 255, 1)
@@ -111,7 +110,7 @@ class ComputerVision:
                     if min_y - 10 < x['y'] < max_y + 10:
                         list_element.append(x)
 
-            # check if button.html or link
+            # check if button or link
             type = "Text"
             if len(list_element) == 1:
                 element_width = (list_element[0]['props']['width'])
@@ -185,3 +184,5 @@ class ComputerVision:
             self.json[index]['id'] = index
         with open(self.path + '/elements.json', 'w') as outfile:
             outfile.write(json.dumps(self.json, indent=2))
+
+        Generator(self.path)

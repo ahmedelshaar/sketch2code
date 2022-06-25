@@ -1,9 +1,9 @@
-<div data-ecg-options='{"series":[{"type":"line","data":["100","150","300","350"],"name":"Item I","itemStyle":{"color":null}}],"legend":{"data":[null,null,null,null]},"grid":{"left":"5%","right":"5%","bottom":"5%","containLabel":true},"xAxis":{"type":"category","boundaryGap":false,"data":["Category 1","Category 2","Category 3","Category 4"]},"tooltip":{"trigger":"axis"},"yAxis":[{"type":"value"}]}' data-ecg-series='[{"id":1656170435721,"name":"Category I","values":[{"id":1656170435721,"category":"Category 1","value":"100"},{"id":1656170596483,"category":"Category 2","value":"150"},{"id":1656170614926,"category":"Category 3","value":"300"},{"id":1656170633793,"category":"Category 4","value":"350"}],"label":"Item I","color":null}]' data-ecg-theme="macarons" id="i7t6">
+<div data-ecg-options='{"series":[{"type":"bar","data":[{"value":"120","name":"Category 1","itemStyle":{"color":null}},{"value":"40","name":"Category 2","itemStyle":{"color":null}},{"value":"30","name":"Category 3","itemStyle":{"color":null}}]}],"xAxis":[{"data":["Category 1","Category 2","Category 3"]}],"yAxis":[{"type":"value"}]}' data-ecg-series='[{"id":1656170464666,"label":"Category 1","value":"120","color":null},{"id":1656170466952,"label":"Category 2","value":"40","color":null},{"id":1656170467304,"label":"Category 3","value":"30","color":null}]' data-ecg-theme="macarons" id="inw6">
 </div>
 <script>
-var items = document.querySelectorAll('#i7t6');
+var items = document.querySelectorAll('#inw6');
 for (var i = 0, len = items.length; i < len; i++) {
-    (function () {
+  (function () {
       var t = this;
       window.$grapesEcharts || (window.$grapesEcharts = {themes: []});
       var e = JSON.parse(this.getAttribute("data-ecg-options")),

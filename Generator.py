@@ -112,20 +112,19 @@ class Generator:
         elements = z + m
         elements = sorted(elements, key=lambda k: (int(k['y1']), +int(k["x1"])))
         self.json = elements
-        print(json.dumps(self.json, indent=2))
 
     def generator(self):
         elements_dic = {
             'Chart Line': 'inc/chart.html',
+            'Pie charts': 'inc/pie.html',
+            'Stack bar': 'inc/stack.html',
             'Check Box': 'inc/checkbox.html',
             'Image': 'inc/image.html',
             'Input': 'inc/input.html',
             'Map': 'inc/map.html',
             'Paragraph': 'inc/p.html',
-            'Pie charts': 'inc/chart.html',
             'Radio Box': 'inc/radiobox.html',
             'Search': 'inc/search.html',
-            'Stack bar': 'inc/chart.html',
             'Textarea': 'inc/textarea.html',
             'Youtube': 'inc/youtube.html',
             'Text': 'inc/text.html',
@@ -143,10 +142,10 @@ class Generator:
             template = render_template('layouts/navbar.html', elements=self.json, get_type=elements_dic)
         else:
             template = render_template('layouts/stander.html', elements=self.json, get_type=elements_dic)
+
         if not os.path.exists(self.path + "/design"):
             os.mkdir(self.path + "/design")
             shutil.copy(self.path + "/../../css/style.css", self.path + "/design")
-            shutil.copy(self.path + "/../../js/main.js", self.path + "/design")
         f = open(self.path + "/design/index.html", "w")
         html_template = BeautifulSoup(template, 'html.parser')
         f.write(str(html_template.prettify()))
