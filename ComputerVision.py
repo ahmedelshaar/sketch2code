@@ -7,8 +7,8 @@ import io
 from Generator import Generator
 from Predict import Predict
 
-# import os
-# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/D/projects/graduation/graduation.json"
+import os
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/D/learn/flask/project.json"
 
 class ComputerVision:
 
