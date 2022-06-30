@@ -108,11 +108,11 @@ class ComputerVision:
                 if min_x - 10 < x['x'] < max_x + 10:
                     if min_y - 10 < x['y'] < max_y + 10:
                         list_element.append(x)
-
+            print(list_element)
             # check if button or link
             type = "Text"
             if len(list_element) == 1:
-                element_width = (list_element[0]['props']['width'])
+                element_width = (list_element[0]['width'])
                 text_width = w
                 if element_width > text_width + 50:
                     type = "Button"

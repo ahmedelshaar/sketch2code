@@ -131,6 +131,7 @@ class Generator:
             'Button': 'inc/button.html',
             'Row': 'inc/row.html',
             'Column': 'inc/column.html',
+            'Link': 'inc/link.html',
         }
 
         template = ""
@@ -146,7 +147,7 @@ class Generator:
         if not os.path.exists(self.path + "/design"):
             os.mkdir(self.path + "/design")
             shutil.copy(self.path + "/../../css/style.css", self.path + "/design")
-        f = open(self.path + "/design/index.html", "w")
+        f = open(self.path + "/design/dashboard.html", "w")
         html_template = BeautifulSoup(template, 'html.parser')
         f.write(str(html_template.prettify()))
         f.close()

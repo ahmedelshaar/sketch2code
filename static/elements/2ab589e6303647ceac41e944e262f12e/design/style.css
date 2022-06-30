@@ -1,0 +1,52 @@
+.sidebar {
+  height: 100vh;
+  width: 280px;
+}
+
+.sidebar:not(.close) {
+  padding: 1rem;
+}
+.sidebar:not(.close) .logo img {
+  margin-right: 0.5rem;
+}
+.sidebar:not(.close) .logo span {
+  font-size: 1.5rem;
+}
+.sidebar:not(.close) .nav-pills {
+  margin: 20px 0px;
+}
+.sidebar:not(.close) .dropdown img {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.sidebar.close {
+  width: 4.5rem;
+}
+.sidebar.close .logo {
+  padding: 1rem;
+}
+.sidebar.close .logo span {
+  font-size: 0;
+}
+.sidebar.close .nav-pills .nav-link {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0;
+  border-bottom: 1px solid #dee2e6;
+}
+.sidebar.close .nav-pills .nav-link span {
+  font-size: 0;
+}
+.sidebar.close .dropdown {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+.sidebar.close .dropdown img {
+  width: 24px;
+  height: 24px;
+}
+.sidebar.close .dropdown strong {
+  font-size: 0;
+}

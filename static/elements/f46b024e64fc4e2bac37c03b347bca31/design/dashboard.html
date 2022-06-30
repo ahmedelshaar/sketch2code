@@ -1,0 +1,230 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Design
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+   <link href="style.css" rel="stylesheet"/>
+   <script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+   </script>
+  </link>
+ </head>
+ <body>
+  <div class="d-flex">
+   <div class="d-flex flex-column flex-shrink-0 bg-light sidebar close">
+    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none logo" href="/">
+     <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png" width="40"/>
+     <span>
+      Sidebar
+     </span>
+    </a>
+    <ul class="nav nav-pills flex-column mb-auto">
+     <li class="nav-item">
+      <a class="nav-link link-dark active" href="#">
+       <i class="fa-solid fa-house">
+       </i>
+       <span>
+        Home
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="nav-link link-dark" href="#">
+       <i class="fa-solid fa-gauge-high">
+       </i>
+       <span>
+        Dashboard
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="nav-link link-dark" href="#">
+       <i class="fa-solid fa-table">
+       </i>
+       <span>
+        Order
+       </span>
+      </a>
+     </li>
+     <li>
+      <a class="nav-link link-dark" href="#">
+       <i class="fa-solid fa-user">
+       </i>
+       <span>
+        Profile
+       </span>
+      </a>
+     </li>
+    </ul>
+    <div class="dropdown">
+     <a aria-expanded="false" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" href="#" id="dropdownUser2">
+      <img alt="" class="rounded-circle" src="https://github.com/mdo.png"/>
+      <strong>
+       mdo
+      </strong>
+     </a>
+     <ul aria-labelledby="dropdownUser2" class="dropdown-menu text-small shadow">
+      <li>
+       <a class="dropdown-item" href="#">
+        New project...
+       </a>
+      </li>
+      <li>
+       <a class="dropdown-item" href="#">
+        Settings
+       </a>
+      </li>
+      <li>
+       <a class="dropdown-item" href="#">
+        Profile
+       </a>
+      </li>
+      <li>
+       <hr class="dropdown-divider"/>
+      </li>
+      <li>
+       <a class="dropdown-item" href="#">
+        Sign out
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <main class="px-3 w-100">
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-12">
+       <div class="form-check">
+        <input class="form-check-input" id="flexRadioDefault1" name="flexRadioDefault" type="radio"/>
+        <label class="form-check-label" for="flexRadioDefault1">
+         Default radio
+        </label>
+       </div>
+       <div class="form-check">
+        <input checked="" class="form-check-input" id="flexRadioDefault2" name="flexRadioDefault" type="radio"/>
+        <label class="form-check-label" for="flexRadioDefault2">
+         Default checked radio
+        </label>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-6">
+       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/SH8Towy7rig?controls=0" title="YouTube video player" width="560">
+       </iframe>
+      </div>
+      <div class="col-md-6">
+       <h2>
+        |Q
+       </h2>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-6">
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti error esse harum id maxime odit, sed temporibus totam unde.
+       </p>
+      </div>
+      <div class="col-md-6">
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti error esse harum id maxime odit, sed temporibus totam unde.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-12">
+       <img alt="..." class="img-fluid" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"/>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-12">
+       <div data-ecg-options='{"series":[{"type":"pie","data":[{"value":"10","name":"Category 1","itemStyle":{"color":null}},{"value":"40","name":"Category 2","itemStyle":{"color":null}},{"value":"60","name":"Category 3","itemStyle":{"color":null}}]}]}' data-ecg-series='[{"id":1656170500797,"label":"Category 1","value":"10","color":null},{"id":1656170502226,"label":"Category 2","value":"40","color":null},{"id":1656170502570,"label":"Category 3","value":"60","color":null}]' data-ecg-theme="macarons" id="i19a">
+       </div>
+       <script>
+        var items = document.querySelectorAll('#i19a');
+for (var i = 0, len = items.length; i < len; i++) {
+    (function () {
+        var t = this;
+        window.$grapesEcharts || (window.$grapesEcharts = {themes: []});
+        var e = JSON.parse(this.getAttribute("data-ecg-options")), n = this.getAttribute("data-ecg-theme") || null,
+            i = function () {
+                try {
+                    var i = echarts.getInstanceByDom(t);
+                    i && echarts.dispose(i);
+                    var r = echarts.init(t, n);
+                    e && r.setOption(e)
+                } catch (t) {
+                    console.log(t)
+                }
+            }, r = function () {
+                if (n) if (window.$grapesEcharts.themes.includes(n)) i(); else {
+                    var t = document.createElement("script");
+                    t.onload = i, window.$grapesEcharts.themes.push(n), t.src = "https://unpkg.com/echarts@4.6.0/theme/".concat(n, ".js"), document.body.appendChild(t)
+                } else i()
+            };
+        if ("undefined" == typeof echarts) {
+            var o = document.createElement("script");
+            o.onload = r, o.src = "https://cdnjs.cloudflare.com/ajax/libs/echarts/4.6.0/echarts-en.min.js", document.body.appendChild(o)
+        } else r()
+    }.bind(items[i]))();
+}
+       </script>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-12">
+       <h2>
+        Comments
+       </h2>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-6">
+       <img alt="..." class="img-fluid" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"/>
+      </div>
+      <div class="col-md-6">
+       <div class="mb-3">
+        <label class="form-label" for="exampleFormControlTextarea1">
+         Example textarea
+        </label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="container py-5">
+     <div class="row">
+      <div class="col-md-6">
+       <div class="mb-3">
+        <label class="form-label" for="exampleFormControlInput1">
+         Email address
+        </label>
+        <input class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" type="email"/>
+       </div>
+      </div>
+      <div class="col-md-6">
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti error esse harum id maxime odit, sed temporibus totam unde.
+       </p>
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+ </body>
+</html>
