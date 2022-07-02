@@ -1,0 +1,62 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+.btn-blue{
+    background-color: rgb(53, 53, 241);
+    color: aliceblue;
+    font-size: large ;
+    font-weight: bolder;
+    width: 50%;
+    height: 60px;
+    
+}
+/* Navbar */
+.navbar{
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 7%);
+}
+/* Section Two*/
+#sectionOne h2{
+    font-weight: 700;
+}
+#sectionOne .row .row .col-md-6 > div,
+#sectionTwo .content{
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 7%);
+    border: 1px solid #eee;
+}
+#sectionOne h3{
+    background: rgb(59, 59, 228);
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    font-weight: bolder;
+}
+#sectionOne h4{
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+/* Section Two */
+#sectionTwo > h2{
+    text-align: center;
+    font-weight: 700;
+}
+#sectionTwo .row h2{
+    background: rgb(59, 59, 228);
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
+}
+#sectionTwo .row p{
+    margin: 0;
+}

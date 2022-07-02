@@ -167,7 +167,7 @@ def signin():
 @app.route('/logout')
 def logout():
     session.clear()
-    return render_template('index.html')
+    return redirect(url_for('home'))
 
 ################## project routes ##################
 @app.route('/project/new', methods=['POST'])
