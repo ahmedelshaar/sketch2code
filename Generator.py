@@ -13,7 +13,6 @@ class Generator:
         self.navbar = False
         self.sidebar = False
         self.json = []
-        self.html = ""
         self.read_json()
         self.reset_dimensions()
         self.gridsystem()
@@ -137,7 +136,7 @@ class Generator:
         template = ""
         if self.navbar and self.sidebar:
             template = render_template('layouts/sidebar_navbar.html', elements=self.json, get_type=elements_dic)
-        if self.sidebar:
+        elif self.sidebar:
             template = render_template('layouts/sidebar.html', elements=self.json, get_type=elements_dic)
         elif self.navbar:
             template = render_template('layouts/navbar.html', elements=self.json, get_type=elements_dic)

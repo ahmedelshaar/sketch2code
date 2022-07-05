@@ -13,12 +13,12 @@ from functools import wraps
 import os
 
 app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
-
 app.config['SECRET_KEY'] = "sketch2code"
+app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, "static/sketch")
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, "static/sketch")
 
 db = SQLAlchemy(app)
 Migrate(app, db)
